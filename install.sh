@@ -24,7 +24,11 @@ mkdir "nginx" && wget -qO- $NGINX_TAR_PATH | tar xz -C "nginx" --strip-component
 echo "Downloading and extracting $NGINX_RTMP_TAR_PATH"
 mkdir "nginx-rtmp-module" && wget -qO- $NGINX_RTMP_TAR_PATH | tar xz -C "nginx-rtmp-module" --strip-components=1
 
+#build nginx
 cd "$EZSTREAM_BUILD_PATH/nginx"
 ./configure --with-http_ssl_module --add-module="../nginx-rtmp-module"
 make
 make install
+
+#start nginx
+/usr/local/nginx/sbin/nginx
