@@ -25,6 +25,7 @@ echo "Downloading and extracting $NGINX_RTMP_TAR_PATH"
 mkdir "nginx-rtmp-module" && wget -qO- $NGINX_RTMP_TAR_PATH | tar xz -C "nginx-rtmp-module" --strip-components=1
 
 #Setup Go and build auth package
+echo "Building Go-Auth Files"
 mkdir "$EZSTREAM_ROOT/go"
 export GOPATH="$EZSTREAM_ROOT/go"
 export GOBIN="$GOPATH/bin"
@@ -50,6 +51,9 @@ cp "$EZSTREAM_SOURCE_PATH/defaultfiles/index.html" "/usr/local/nginx/html/"
 cp "$EZSTREAM_SOURCE_PATH/defaultfiles/nginx.conf" "/usr/local/nginx/conf/"
 
 #start stream-auth
-"$GOPATH/bin/EZ-StreamServer-Auth"
+echo "Starting Go-Auth"
+"$GOPATH/bin/EZ-StreamServer-Auth" &
+
 #start nginx
-/usr/local/nginx/sbin/nginx
+echo "Starting NGINX"
+/usr/local/nginx/sbin/nginx &
