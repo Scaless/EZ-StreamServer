@@ -45,8 +45,10 @@ make >>"$EZSTREAM_BUILD_PATH/nginx_make.log" 2>&1
 echo "Installing NGINX - see nginx_install.log for details"
 make install >>"$EZSTREAM_BUILD_PATH/nginx_install.log" 2>&1
 
-#Copy Default FIles
+#Copy Default Files
 cp "$EZSTREAM_SOURCE_PATH/defaultfiles/index.html" "/usr/local/nginx/html/"
+cp "$EZSTREAM_SOURCE_PATH/defaultfiles/nginx.conf" "/usr/local/nginx/conf/"
+cp "$EZSTREAM_SOURCE_PATH/defaultfiles/info.php" "/usr/local/nginx/html/"
 
 #start nginx
 /usr/local/nginx/sbin/nginx
