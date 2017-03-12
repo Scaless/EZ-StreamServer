@@ -12,7 +12,8 @@ NGINX_RTMP_TAR_PATH="https://github.com/arut/nginx-rtmp-module/archive/v1.1.11.t
 
 #Begin installation
 echo "Installing required packages"
-apt-get -q update && apt-get -q install $EZSTREAM_NEEDED_PACKAGES -y >> "$EZSTREAM_ROOT/package_install.log" 2>&1
+apt-get -q update >> "$EZSTREAM_ROOT/package_install.log" 2>&1 \
+    && apt-get -q install $EZSTREAM_NEEDED_PACKAGES -y >> "$EZSTREAM_ROOT/package_install.log" 2>&1
 
 mkdir $EZSTREAM_BUILD_PATH
 cd $EZSTREAM_BUILD_PATH

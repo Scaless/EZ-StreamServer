@@ -20,3 +20,5 @@ rm -rf "/usr/local/nginx"
 #Remove Go files
 echo "Removing Go files"
 rm -rf "$HOME/go"
+
+rm $HOME/*.log
