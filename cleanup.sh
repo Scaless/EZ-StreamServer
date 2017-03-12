@@ -15,3 +15,7 @@ fi
 #Remove NGINX files
 echo "Removing NGINX files"
 rm -rf "/usr/local/nginx"
+
+#Remove Golang files
+echo "Removing Golang files"
+rm -rf "/usr/local/go"
