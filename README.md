@@ -5,6 +5,7 @@ Super easy streaming server setup
 Temporary install instructions until I can actually host the install scripts
 
     cd ~
-    wget -qO - https://github.com/Scaless/EZ-StreamServer/archive/master.tar.gz | tar zx --strip-components=1 EZ-StreamServer-master/install.sh
+    wget -qO - https://github.com/Scaless/EZ-StreamServer/archive/master.tar.gz | tar zx
+    cd master
     chmod +x install.sh
     ./install.sh
