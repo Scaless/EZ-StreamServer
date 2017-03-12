@@ -1,6 +1,8 @@
 # EZ-StreamServer
 Super easy streaming server setup
 
+Current focus: Debian/Ubuntu
+
 ## Installation Instructions
 Temporary install instructions until I can actually host the install scripts
 
