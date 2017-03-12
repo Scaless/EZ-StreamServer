@@ -39,5 +39,11 @@ make install >>"$EZSTREAM_BUILD_PATH/nginx_install.log" 2>&1
 cp "$EZSTREAM_SOURCE_PATH/defaultfiles/index.html" "/usr/local/nginx/html/"
 cp "$EZSTREAM_SOURCE_PATH/defaultfiles/nginx.conf" "/usr/local/nginx/conf/"
 
+EXPORT GOPATH="$EZSTREAM_ROOT/go"
+EXPORT GOBIN="$GOPATH/bin"
+
+go get github.com/Scaless/EZ-StreamServer-Auth
+go install
+
 #start nginx
 /usr/local/nginx/sbin/nginx
