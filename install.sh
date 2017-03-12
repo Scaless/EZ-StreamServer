@@ -24,6 +24,7 @@ echo "Downloading and extracting $NGINX_RTMP_TAR_PATH"
 mkdir "nginx-rtmp-module" && wget -qO- $NGINX_RTMP_TAR_PATH | tar xz -C "nginx-rtmp-module" --strip-components=1
 
 #Setup Go and build auth package
+mkdir "$EZSTREAM_ROOT/go"
 export GOPATH="$EZSTREAM_ROOT/go"
 export GOBIN="$GOPATH/bin"
 
