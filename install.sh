@@ -1,8 +1,7 @@
 #!/bin/bash
 
 #Packages needed to install everything
-EZSTREAM_NEEDED_PACKAGES="build-essential libpcre3 libpcre3-dev libssl-dev wget git"
-EZSTREAM_OPTIONAL_PACKAGES=""
+EZSTREAM_NEEDED_PACKAGES="build-essential libpcre3 libpcre3-dev libssl-dev wget git golang-go"
 #Root paths for building files
 EZSTREAM_ROOT="$HOME"
 EZSTREAM_BUILD_PATH="$EZSTREAM_ROOT/EZstreambuild"
