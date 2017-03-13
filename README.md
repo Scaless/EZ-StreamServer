@@ -17,5 +17,6 @@ Temporary install instructions until I can actually host the install scripts
 Stream must be x264 video/AAC audio to work with HLS.
 
 OBS Settings:
+
     URL: rtmp://<IP_or_hostname>/HLS?123456
     Stream key: scalesstreamkey
